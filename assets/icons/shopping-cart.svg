@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="1920" height="1080" fill="#fff"/>
+    <g id="shopping-cart" transform="translate(704 315)">
+      <path id="Path_1" data-name="Path 1" d="M166,300H437a14.953,14.953,0,0,0,14.414-10.883l60-210A14.98,14.98,0,0,0,497,60H131.371L120.648,11.75A15,15,0,0,0,106,0H15a15,15,0,0,0,0,30H93.961l54.168,243.75A44.973,44.973,0,0,0,166,360H437a15,15,0,0,0,0-30H166a15,15,0,1,1,0-30Zm0,0" fill="#fff"/>
+      <path id="Path_2" data-name="Path 2" d="M151,405a45,45,0,1,0,45-45A45.05,45.05,0,0,0,151,405Zm0,0" fill="#fff"/>
+      <path id="Path_3" data-name="Path 3" d="M362,405a45,45,0,1,0,45-45A45.049,45.049,0,0,0,362,405Zm0,0" fill="#fff"/>
+    </g>
+  </g>
+</svg>

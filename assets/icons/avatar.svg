@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="763" height="763" viewBox="0 0 763 763">
+  <defs>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="763" height="763"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="763" height="763" fill="#fff"/>
+    <g id="Group_1" data-name="Group 1">
+      <g id="Group_1-2" data-name="Group 1" transform="translate(-194 -13)">
+        <g id="avatar" transform="translate(8.615)">
+          <g id="Group_1-3" data-name="Group 1" transform="translate(310 138)">
+            <path id="Path_1" data-name="Path 1" d="M333.187,237.4a131.184,131.184,0,0,0,54.1-106.123C387.282,58.893,328.389,0,256,0S124.718,58.893,124.718,131.282a131.161,131.161,0,0,0,54.067,106.1c-81.412,31.19-139.4,110.151-139.4,202.42a72.287,72.287,0,0,0,72.2,72.2H400.41a72.287,72.287,0,0,0,72.2-72.205C472.615,347.531,414.627,268.57,333.187,237.4ZM164.1,131.282a91.9,91.9,0,1,1,91.9,91.9,91.9,91.9,0,0,1-91.9-91.9ZM400.41,472.615H111.59a32.857,32.857,0,0,1-32.82-32.821c0-97.726,79.5-177.231,177.231-177.231s177.231,79.5,177.231,177.231A32.859,32.859,0,0,1,400.41,472.615Z" fill="#ffbfc1"/>
+          </g>
+        </g>
+        <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(194 13)" fill="none" stroke="#9fc4e4" stroke-width="10">
+          <circle cx="381" cy="381" r="381" stroke="none"/>
+          <circle cx="381" cy="381" r="376" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

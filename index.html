@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetstix</title>
+    <link rel="icon" href="assets/icons/favicon.png">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="static/index-style.css">
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- slick slide  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css">
+</head>
+
+<body>
+    <header class="position-relative">
+        <!-- Large Navbar start -->
+        <nav class="large-navbar ">
+            <!-- top navbar -->
+            <div class="top-navbar" id="top-navbar">
+                <img src="assets/icons/delivery-truck.svg" alt="Sweetstix delivery" class="top-navbar-img">
+                <p class="top-navbar-par">FREE SHIPPING for orders over R550</p>
+                <i onclick="closeTopNavbarFunc ()"
+                    class="bi bi-x-lg text-muted position-absolute top-50 end-0 translate-middle-y me-4"></i>
+            </div>
+
+            <!-- main navbar -->
+            <div class=" navbar-align ">
+                <div class="social-links">
+                    <a href="" class="social-links-icons">
+                        <img src="assets/icons/facebook-app-symbol.svg" alt="" width="auto" height="13px"> </a>
+                    <a href="" class="social-links-icons">
+                        <img src="assets/icons/instagram.svg" alt="" width="13px" height="auto"> </a>
+                </div>
+
+                <a href=""><img src="assets/icons/logo.png" alt="" class="logo"></a>
+
+                <div class="profile-section position-relative">
+                    <a href=""><img src="assets/icons/avatar.svg" alt="" class="profile-avatar "></a>
+
+                    <a href="" class="profile-section-link">
+                        Hello! <br> <b>My Account</b></a>
+
+                    <div class="position-relative cart-viewer">
+                        <img src="assets/icons/bag.svg" alt="" class="bag-icon">
+                        <span class="position-absolute top-0 start-100 translate-middle bag-counter shadow-sm">0</span>
+                        <div class="cart position-absolute top-100 end-50 shadow ">
+                            <div class="cart-info">
+                                <p>0 ITEMS</p>
+                                <a href="">VIEW CART</a>
+                            </div>
+                            <div class="cart-items">
+                                <p>No items found</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- secondary navbar -->
+            <div class="navbar-align" id="secondary-navbar">
+                <!--secondary navbar not used yet-->
+                <a href="" class="nav-deals"><span>LIMITED TIME</span><br>
+                    DAILY DEALS
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="" class="nav-item">HOME</a></li>
+                    <li class="shop-menu"><a href="" class="nav-item">SHOP ></a>
+                        <ul class="shop-menu-list position-absolute top-100 start-0  bg-body shadow ">
+
+                            <li><a class="shop-menu-item" href="">TRENDING</a> </li>
+                            <li><a class="shop-menu-item" href="">TOYS</a> </li>
+                            <li><a class="shop-menu-item" href="">CLOTHES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="nav-item">ABOUT US</a></li>
+                    <li><a href="" class="nav-item">BLOG</a></li>
+                    <li><a href="" class="nav-item">FAQ</a></li>
+                    <li><a href="" class="nav-item">CONTACT US</a></li>
+                </ul>
+
+                <!-- search box controller -->
+                <div class="nav-search position-relative" >
+                    <div onclick="searchBoxFunc ()" class="d-flex">
+                    <img src="assets/icons/search.svg" alt="" width="15px">
+                    <p>SEARCH</p></div>
+
+                    <!-- search box -->
+                    <div class="position-absolute top-0 end-0  search-box">
+                        <span class="triangle"></span>
+                        <form class="search-box-body">
+                            <input type="text" placeholder="search">
+                            <select class="search-menu">
+                                <option selected="true" disabled="disabled">Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <button type="submit"><i class="bi bi-search "></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Large Navbar end -->
+
+        <!-- Small Navbar start -->
+        <nav class="small-navbar" id="small-nav">
+            <div class="small-navbar-left">
+                <a class="small-navbar-toggler" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <i class="bi bi-list h3"></i></a>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="offcanvas-navbar">
+                            <li class="offcanvas-nav-item"><a href="">HOME</a> </li>
+                            <li class="offcanvas-nav-item d-flex"><a href="">SHOP</a> <span
+                                    onclick="offcanvasNavItemMenu()" class="px-3">></span></li>
+                            <ul class="offcanvas-shop-menu offcanvas-navbar">
+                                <li class="offcanvas-shop-menu-item offcanvas-nav-item"><a href="">Trending</a></li>
+                                <li class="offcanvas-shop-menu-item offcanvas-nav-item"><a href="">Toys</a></li>
+                                <li class="offcanvas-shop-menu-item offcanvas-nav-item"><a href="">Clothes</a></li>
+
+                            </ul>
+                            <li class="offcanvas-nav-item"><a href="">ABOUT US</a></li>
+                            <li class="offcanvas-nav-item"><a href="">BLOG</a></li>
+                            <li class="offcanvas-nav-item"><a href="">FAQ</a></li>
+                            <li class="offcanvas-nav-item"><a href="">CONTACT US</a></li>
+                        </ul>
+
+                        <a class="offcanvas-deals" href="">DAILY DEALS <span>LIMTED TIME</span></a>
+                        <a class="offcanvas-login" href="">LOG IN</a>
+                        <div class="d-flex justify-content-center">
+                            <a href="" class="offcanvas-facebook"><img src="assets/icons/facebook-app-symbol.svg" alt=""
+                                    height="15px">
+                            </a>
+                            <a href="" class="offcanvas-insta"><img src="assets/icons/instagram.svg" alt=""
+                                    width="15px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href=""><img src="assets/icons/logo.png" alt="" class="logo"></a>
+            </div>
+            <div class="small-navbar-right position-relative">
+                <div class="position-relative cart-viewer">
+                    <img src="assets/icons/bag.svg" alt="" class="bag-icon">
+                    <span class="position-absolute top-0 start-100 translate-middle bag-counter shadow-sm">0</span>
+                    <div class="cart position-absolute position-absolute top-100 end-50 shadow  ">
+                        <span class="triangle"></span>
+                        <div class="cart-info">
+                            <p>0 ITEMS</p>
+                            <a href="">VIEW CART</a>
+                        </div>
+                        <div class="cart-items">
+                            <p>No items found</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- search box controller -->
+                <div class="nav-search position-relative" >
+                    <div onclick="searchBoxFuncSmall ()" class="d-flex">
+                    <img src="assets/icons/search.svg" alt="" width="20px">
+                    <p>SEARCH</p> </div>
+                    <!-- search box -->
+                    <div class="position-absolute top-0 end-0  search-box-small">
+                        <span class="triangle"></span>
+                        <form class="search-box-body">
+                            <input type="text" placeholder="search">
+                            <select class="search-menu">
+                                <option selected="true" disabled="disabled">Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <button type="submit"><i class="bi bi-search "></i></button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Small Navbar end -->
+
+        <!-- header-slider start -->
+        <main>
+            <div id="header-slider-bs" >
+                <div class="header-slider">
+                    <div >
+                        <img src="assets/banner-toys-1536x595.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div >
+                        <img src="assets/baby-walker-banner-wide-1-1536x595.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- header-slider end -->
+
+        <!-- Call to Action section -->
+        <div class="call-action">
+            <article class="call-action-article">
+                <h2>AS A SMALL, FOCUSED AND DEDICATED TEAM</h2>
+                <p>We strive to go the extra mile with every order we receive <br>
+                    We work hard to ensure that when you place your order it's treated with love and care</p>
+
+            </article>
+            <button class="btn btn-primary action-btn">SHOP NOW <i class="bi bi-cart3"></i> </button>
+        </div>
+
+    </header>
+    <!------ Daily Deals ------->
+    <section class="daily-deals">
+
+        <h1>DAILY DEALS</h1>
+        <p class="text-muted fs-5">Limted Time Offers</p>
+        <div id="counter">
+            <div class="d-flex">
+                <span id="days">11</span>
+                <span class=" fs-5 me-2">Days</span>
+            </div>
+            <div class="d-flex">
+                <span id="hours">12</span>
+                <span class=" fs-5 me-2">Hours</span>
+            </div>
+
+            <div class="d-flex">
+                <span id="minutes">4</span>
+                <span class=" fs-5 me-2">Minutes</span>
+            </div>
+            <div class="d-flex">
+                <span id="seconds">32</span>
+                <span class=" fs-5 me-2">Seconds</span>
+            </div>
+        </div>
+
+        <div class="daily-deals-menu">
+
+            <div class="daily-deals-item p-2">
+                <img src="assets/daily-deals-img1.jpg" alt="" width="100%">
+                <span class="position-absolute top-0 start-0 m-3 "> -5%</span>
+                <div class="daily-deals-item-category">
+                    <a href="">DAILY DEALS,</a>
+                    <a href="">PUSH / PULL TOYS,</a>
+                    <a href="">TOYS,</a>
+                    <a href="">WALKERS</a>
+                </div>
+                <a href="" class="daily-deals-product-name">Wooden Activity Walker</a>
+                <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="discount-price "> <span class="text-muted me-2"> <s> R750.00</s></span>R645.00</p>
+                <button class="add-item-btn"> <i class="bi bi-bag text-white fw-bold me-2"></i> ADD TO BASKET</button>
+            </div>
+
+            <div class="daily-deals-item p-2">
+                <img src="assets/daily-deals-img2.jpg" alt="" width="100%">
+                <span class="position-absolute top-0 start-0 m-3 "> -5%</span>
+                <div class="daily-deals-item-category">
+                    <a href="">DAILY DEALS,</a>
+                    <a href="">PUSH / PULL TOYS,</a>
+                    <a href="">TOYS,</a>
+                    <a href="">WALKERS</a>
+                </div>
+                <a href="" class="daily-deals-product-name">Wooden Activity Walker</a>
+                <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="discount-price "> <span class="text-muted me-2"> <s> R750.00</s></span>R645.00</p>
+                <button class="add-item-btn"> <i class="bi bi-bag text-white fw-bold me-2"></i> ADD TO BASKET</button>
+            </div>
+
+            <div class="daily-deals-item p-2">
+                <img src="assets/daily-deals-img3.jpg" alt="" class=" bg-body" width="100%">
+                <span class="position-absolute top-0 start-0 m-3 "> -5%</span>
+                <div class="daily-deals-item-category">
+                    <a href="">DAILY DEALS,</a>
+                    <a href="">PUSH / PULL TOYS,</a>
+                    <a href="">TOYS,</a>
+                    <a href="">WALKERS</a>
+                </div>
+                <a href="" class="daily-deals-product-name">Wooden Activity Walker</a>
+                <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="discount-price "> <span class="text-muted me-2"> <s> R750.00</s></span>R645.00</p>
+                <button class="add-item-btn"> <i class="bi bi-bag text-white fw-bold me-2"></i> ADD TO BASKET</button>
+            </div>
+
+            <div class="daily-deals-item p-2 ">
+                <img src="assets/daily-deals-img4.jpeg" alt="" width="100%">
+                <span class="position-absolute top-0 start-0 m-3 "> -5%</span>
+                <div class="daily-deals-item-category">
+                    <a href="">DAILY DEALS,</a>
+                    <a href="">PUSH / PULL TOYS,</a>
+                    <a href="">TOYS,</a>
+                    <a href="">WALKERS</a>
+                </div>
+                <a href="" class="daily-deals-product-name">Wooden Activity Walker</a>
+                <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="discount-price "> <span class="text-muted me-2"> <s> R750.00</s></span>R645.00</p>
+                <button class="add-item-btn"> <i class="bi bi-bag text-white fw-bold me-2"></i> ADD TO BASKET</button>
+            </div>
+        </div>
+        <a href="" class="text-decoration-none h5 fst-italic">View All Daily Deals > </a>
+    </section>
+
+    <!-- New Kids Toys -->
+    <section class="new-toys ">
+        <h2>NEW KIDS TOYS</h2>
+        <div class="d-flex justify-content-between slick-carousel new-toys-container">
+            <div class="new-toys-item">
+                <img src="assets/wooden-insect-peg-puzzle-300x300.jpg" alt="" width="100%">
+                <a href="">Mosaic Collage – Princess</a>
+                <span>R125.00</span>
+            </div>
+            <div class="new-toys-item">
+                <img src="assets/wooden-insect-peg-puzzle-300x300.jpg" alt="" width="100%">
+                <a href="">Mosaic Collage – Princess</a>
+                <span>R125.00</span>
+            </div>
+            <div class="new-toys-item">
+                <img src="assets/wooden-insect-peg-puzzle-300x300.jpg" alt="" width="100%">
+                <a href="">Mosaic Collage – Princess</a>
+                <span>R125.00</span>
+            </div>
+            <div class="new-toys-item">
+                <img src="assets/wooden-insect-peg-puzzle-300x300.jpg" alt="" width="100%">
+                <a href="">Mosaic Collage – Princess</a>
+                <span>R125.00</span>
+            </div>
+        </div>
+    </section>
+    <!-- our collection -->
+    <section class="our-collection">
+        <article>
+            <h2>Our Collections</h2>
+            <p>Shop by collection</p>
+        </article>
+
+        <div class="collection-wrapper">
+            <a href="" class="position-relative">
+                <img src="assets/daily-deals-img2.jpg" alt="">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                </div>
+                <p class="position-absolute bottom-0 start-50 translate-middle-x"> Hello Item</p>
+            </a>
+            <a href="" class="position-relative">
+                <img src="assets/daily-deals-img2.jpg" alt="">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                </div>
+                <p class="position-absolute bottom-0 start-50 translate-middle-x"> Hello Item</p>
+            </a>
+            <a href="" class="position-relative">
+                <img src="assets/daily-deals-img2.jpg" alt="">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                </div>
+                <p class="position-absolute bottom-0 start-50 translate-middle-x"> Hello Item</p>
+            </a>
+            <a href="" class="position-relative">
+                <img src="assets/daily-deals-img2.jpg" alt="">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                </div>
+                <p class="position-absolute bottom-0 start-50 translate-middle-x"> Hello Item</p>
+            </a>
+            <a href="" class="position-relative">
+                <img src="assets/daily-deals-img2.jpg" alt="">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                </div>
+                <p class="position-absolute bottom-0 start-50 translate-middle-x"> Hello Item</p>
+            </a>
+        </div>
+    </section>
+    <!-- Best Selling Kids Toys -->
+    <section class="best-selling">
+
+        <div class="best-selling-toys">
+            <div class="position-relative">
+                <img src="assets/daily-deals-img2.jpg" alt="" width="100%">
+                <p class="position-absolute bottom-0 start-50 translate-middle-x">
+                    <a href="" class="text-decoration-none fw-bold">view all Collections</a>
+                </p>
+            </div>
+            <div>
+                <h2>BEST SELLING KIDS TOYS</h2>
+                <div class="best-selling-toys-menu slick-carousel">
+
+                    <div class="best-selling-toys-item p-2">
+                        <img src="assets/daily-deals-img1.jpg" alt="" class="img-fluid" width="150px">
+                        <span class="position-absolute top-0 start-0 m-3 "> -5%</span>
+                        <div class="daily-deals-item-category">
+                            <a href="">DAILY DEALS,</a>
+                            <a href="">PUSH / PULL TOYS</a>
+                        </div>
+                        <a href="" class="daily-deals-product-name">Wooden Activity Walker</a>
+                        <div class="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="discount-price ">R645.00</p>
+                        <button class="add-item-btn"> <i class="bi bi-bag text-white fw-bold me-2"></i> ADD TO
+                            BASKET</button>
+                    </div>
+
+                    <div class="best-selling-toys-item p-2">
+                        <img src="assets/daily-deals-img1.jpg" alt="" class="img-fluid" width="150px">
+                        <span class="position-absolute top-0 start-0 m-3 "> -5%</span>
+                        <div class="daily-deals-item-category">
+                            <a href="">DAILY DEALS,</a>
+                            <a href="">PUSH / PULL TOYS</a>
+                        </div>
+                        <a href="" class="daily-deals-product-name">Wooden Activity Walker</a>
+                        <div class="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="discount-price ">R645.00</p>
+                        <button class="add-item-btn"> <i class="bi bi-bag text-white fw-bold me-2"></i> ADD TO
+                            BASKET</button>
+                    </div>
+
+                    <div class="best-selling-toys-item p-2">
+                        <img src="assets/daily-deals-img1.jpg" alt="" class="img-fluid" width="150px">
+                        <span class="position-absolute top-0 start-0 m-3 "> -5%</span>
+                        <div class="daily-deals-item-category">
+                            <a href="">DAILY DEALS,</a>
+                            <a href="">PUSH / PULL TOYS</a>
+                        </div>
+                        <a href="" class="daily-deals-product-name">Wooden Activity Walker</a>
+                        <div class="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="discount-price ">R645.00</p>
+                        <button class="add-item-btn"> <i class="bi bi-bag text-white fw-bold me-2"></i> ADD TO
+                            BASKET</button>
+                    </div>
+
+                    <div class="best-selling-toys-item p-2">
+                        <img src="assets/daily-deals-img1.jpg" alt="" class="img-fluid" width="150px">
+                        <span class="position-absolute top-0 start-0 m-3 "> -5%</span>
+                        <div class="daily-deals-item-category">
+                            <a href="">DAILY DEALS,</a>
+                            <a href="">PUSH / PULL TOYS,</a>
+                        </div>
+                        <a href="" class="daily-deals-product-name">Wooden Activity Walker</a>
+                        <div class="rating">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="discount-price ">R645.00</p>
+                        <button class="add-item-btn"> <i class="bi bi-bag text-white fw-bold me-2"></i> ADD TO
+                            BASKET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="best-selling-services">
+            <div class="d-flex flex-row">
+                <i class="bi bi-truck me-4 h1"></i>
+                <article>
+                    <h6>FREE DELIVERIES</h6>
+                    <p class="text-muted">Pargo From R400</p>
+                    <p class="fw-normal text-muted">To Door From R550</p>
+                </article>
+            </div>
+            <div class="d-flex flex-row">
+                <i class="bi bi-arrow-repeat me-4 h1"></i>
+                <article>
+                    <h6>RETURNS</h6>
+                    <p class="text-muted">No hassle returns</p>
+                    <p class="fw-normal text-muted">for broken items</p>
+                </article>
+            </div>
+            <div class="d-flex flex-row">
+                <i class="bi bi-credit-card me-4 h1"></i>
+                <article>
+                    <h6>PAYMENTS</h6>
+                    <p class="text-muted">100% Safe & Secure</p>
+                    <p class="fw-normal text-muted">payments & checkout</p>
+                </article>
+            </div>
+            <div class="d-flex flex-row">
+                <i class="bi bi-bounding-box-circles me-4 h1"></i>
+                <article>
+                    <h6>Need Help?</h6>
+                    <p class="text-muted">WhatsApp</p>
+                    <p class="fw-normal text-muted">live chat, email or phone</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer reviews -->
+    <section class="customer-reviews ">
+        <h2>Customer Reviews</h2>
+
+        <div class="customer-feedback-wrapper customers-slider">
+            <div>
+                <div class="customer-feedback mt-2">
+                    <article class="d-flex flex-row ">
+                        <h5>Sharon</h5>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </article>
+                    <p>Will definitely purchase from this company again. Your staff were very friendly.</p>
+                </div>
+                <div class="customer-feedback mt-2">
+                    <article class="d-flex flex-row ">
+                        <h5>Cheryl</h5>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </article>
+                    <p>Delighted with the walker but even more impressed with the exceptional service. My parcel got
+                        lost and John flew a replacement up to me at his own cost with extra goodies in the box.
+                        Best service I have ever received and will certainly be using your company again. Thank you</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="customer-feedback mt-2">
+                    <article class="d-flex flex-row ">
+                        <h5>Helen</h5>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </article>
+                    <p>I was really satisfied with your service! And the prices were SO reasonable! Baie dankie.</p>
+                </div>
+                <div class="customer-feedback mt-2">
+                    <article class="d-flex flex-row ">
+                        <h5>Sharon</h5>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </article>
+                    <p>Will definitely purchase from this company again. Your staff were very friendly.</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="customer-feedback mt-2">
+                    <article class="d-flex flex-row ">
+                        <h5>Helen</h5>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </article>
+                    <p>I was really satisfied with your service! And the prices were SO reasonable! Baie dankie.</p>
+                </div>
+                <div class="customer-feedback mt-2">
+                    <article class="d-flex flex-row ">
+                        <h5>Sharon</h5>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </article>
+                    <p>Will definitely purchase from this company again. Your staff were very friendly.</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="customer-feedback mt-2">
+                    <article class="d-flex flex-row ">
+                        <h5>Helen</h5>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </article>
+                    <p>I was really satisfied with your service! And the prices were SO reasonable! Baie dankie.</p>
+                </div>
+                <div class="customer-feedback mt-2">
+                    <article class="d-flex flex-row ">
+                        <h5>Sharon</h5>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </article>
+                    <p>Will definitely purchase from this company again. Your staff were very friendly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog post section  -->
+    <section class="recent-blogs">
+        <h2>RECENT BLOG POSTS</h2>
+        <a href=""> <i> View All Blog Posts > </i></a>
+        <div class="post-wrapper blog-slider">
+            <div class="post-warpper-item">
+                <div><img src="assets/blog-post1.jpg" alt="" class="img-fluid"></div>
+                <article class="post-info">
+                    <div class="post-info-date">
+                        <p>16</p>
+                        <p>Aug</p>
+                    </div>
+                    <div class="post-info-details">
+                        <a href="">How to Encourage Sharing In Your Toddler </a>
+                        <p>We human beings are naturally tailored to be cooperative.
+                            However, that doesn't necessarily mean that all of us take... </p>
+                        <a href="">read more ></a>
+                    </div>
+                </article>
+            </div>
+            <div class="post-warpper-item">
+                <div><img src="assets/blog-post1.jpg" alt="" class="img-fluid"></div>
+                <article class="post-info">
+                    <div class="post-info-date">
+                        <p>16</p>
+                        <p>Aug</p>
+                    </div>
+                    <div class="post-info-details">
+                        <a href="">How to Encourage Sharing In Your Toddler </a>
+                        <p>We human beings are naturally tailored to be cooperative.
+                            However, that doesn't necessarily mean that all of us take... </p>
+                        <a href="">read more ></a>
+                    </div>
+                </article>
+            </div>
+            <div class="post-warpper-item">
+                <div><img src="assets/blog-post1.jpg" alt="" class="img-fluid"></div>
+                <article class="post-info">
+                    <div class="post-info-date">
+                        <p>16</p>
+                        <p>Aug</p>
+                    </div>
+                    <div class="post-info-details">
+                        <a href="">How to Encourage Sharing In Your Toddler </a>
+                        <p>We human beings are naturally tailored to be cooperative.
+                            However, that doesn't necessarily mean that all of us take... </p>
+                        <a href="">read more ></a>
+                    </div>
+                </article>
+            </div>
+            <div class="post-warpper-item">
+                <div><img src="assets/blog-post1.jpg" alt="" class="img-fluid"></div>
+                <article class="post-info">
+                    <div class="post-info-date">
+                        <p>16</p>
+                        <p>Aug</p>
+                    </div>
+                    <div class="post-info-details">
+                        <a href="">How to Encourage Sharing In Your Toddler </a>
+                        <p>We human beings are naturally tailored to be cooperative.
+                            However, that doesn't necessarily mean that all of us take... </p>
+                        <a href="">read more ></a>
+                    </div>
+                </article>
+            </div>
+            <div class="post-warpper-item">
+                <div><img src="assets/blog-post1.jpg" alt="" class="img-fluid"></div>
+                <article class="post-info">
+                    <div class="post-info-date">
+                        <p>16</p>
+                        <p>Aug</p>
+                    </div>
+                    <div class="post-info-details">
+                        <a href="">How to Encourage Sharing In Your Toddler </a>
+                        <p>We human beings are naturally tailored to be cooperative.
+                            However, that doesn't necessarily mean that all of us take... </p>
+                        <a href="">read more ></a>
+                    </div>
+                </article>
+            </div>
+            <div class="post-warpper-item">
+                <div><img src="assets/blog-post1.jpg" alt="" class="img-fluid"></div>
+                <article class="post-info">
+                    <div class="post-info-date">
+                        <p>16</p>
+                        <p>Aug</p>
+                    </div>
+                    <div class="post-info-details">
+                        <a href="">How to Encourage Sharing In Your Toddler </a>
+                        <p>We human beings are naturally tailored to be cooperative.
+                            However, that doesn't necessarily mean that all of us take... </p>
+                        <a href="">read more ></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Top Quality Brands -->
+    <section class="top-brands">
+        <article>
+            <h2>Top Quality Brands</h2>
+            <span>Shop by Brands</span>
+        </article>
+        <div>
+            <a href=""><img src="assets/little-lumps.jpg" alt=""></a>
+            <a href=""><img src="assets/alexander.jpg" alt=""></a>
+            <a href=""><img src="assets/tooky-toy.jpg" alt=""></a>
+            <a href=""><img src="assets/jarmelo.jpg" alt=""></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <img src="assets/icons/logo.png" alt="" width="300px">
+                <ul class="mt-5">
+                    <li class="border-bottom mt-2"><i class="bi bi-telephone-fill"></i> <span>Phone:</span> <span
+                            class="fw-normal text-muted"> 087 821 6550</span></li>
+                    <li class="border-bottom mt-2"><i class="bi bi-whatsapp"></i> <span>WhatsApp:</span> <span
+                            class="fw-normal text-muted"> 074 050 8890</span></li>
+                    <li class="border-bottom mt-2"><i class="bi bi-envelope"></i> <span>Email: <br></span> <span
+                            class="fw-normal text-muted"> shop@sweetstixtoys.co.za
+                        </span></li>
+                    <li class="mt-5 d-flex">
+                        <a href="" class="social-links-icons me-2">
+                            <img src="assets/icons/facebook-app-symbol.svg" alt="" width="auto" height="13px"> </a>
+                        <a href="" class="social-links-icons">
+                            <img src="assets/icons/instagram.svg" alt="" width="13px" height="auto"> </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p>Account </p>
+                <ul>
+                    <li class="mt-1"><a href="">My Account</a></li>
+                    <li class="mt-1"><a href="">Shipping Rates</a></li>
+                    <li class="mt-1"><a href="">Privacy Policy</a></li>
+                    <li class="mt-1"><a href="">Return Policy</a></li>
+                    <li class="mt-1"><a href="">FAQs</a></li>
+                    <li class="mt-1"><a href="">About us</a></li>
+                </ul>
+            </div>
+            <div>
+                <p>Newsletter</p>
+                <span class="text-muted fw-normal">Get all the latest information on Events, Sales and Offers. Sign up
+                    for newsletter today</span>
+                <form action="">
+                    <input type="text" placeholder="Email Address">
+                    <input type="submit" value="subscribe">
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-end">
+            <div class="copytights">
+                <p>Sweet Stix Toys © 2021. All Rights Reserved.</p>
+                <p>Powered by <a href="" class="text-decoration-none ">Eqolte Services</a> </p>
+            </div>
+            <div class="d-flex">
+                <img src="assets/trust-icons-small-1.png" alt="" width="200px">
+            </div>
+        </div>
+    </footer>
+
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+
+    <!-- JS link -->
+    <script src="js/index-scripts.js"></script>
+    <script src="js/index-sliders.js"></script>
+
+</body>
+
+</html>
