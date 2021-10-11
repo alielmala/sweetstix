@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sweetstix</title>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="static/index-style.css">
+    <link rel="stylesheet" href="static/about.css">
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header class="position-relative">
+        <!-- Large Navbar start -->
+        <nav class="large-navbar ">
+            <!-- top navbar -->
+            <div class="top-navbar" id="top-navbar">
+                <img src="assets/icons/delivery-truck.svg" alt="Sweetstix delivery" class="top-navbar-img">
+                <p class="top-navbar-par">FREE SHIPPING for orders over R550</p>
+                <i onclick="closeTopNavbarFunc ()"
+                    class="fas fa-times text-muted position-absolute top-50 end-0 translate-middle-y me-4"></i>
+            </div>
+
+            <!-- main navbar -->
+            <div class=" navbar-align ">
+                <div class="social-links">
+                    <a href="" class="social-links-icons">
+                        <img src="assets/icons/facebook-app-symbol.svg" alt="" width="auto" height="13px"> </a>
+                    <a href="" class="social-links-icons">
+                        <img src="assets/icons/instagram.svg" alt="" width="13px" height="auto"> </a>
+                </div>
+
+                <a href=""><img src="assets/icons/logo.png" alt="" class="logo"></a>
+
+                <div class="profile-section position-relative">
+                    <a href=""><img src="assets/icons/avatar.svg" alt="" class="profile-avatar "></a>
+
+                    <a href="" class="profile-section-link">
+                        Hello! <br> <b>My Account</b></a>
+
+                    <div class="position-relative cart-viewer">
+                        <img src="assets/icons/bag.svg" alt="" class="bag-icon">
+                        <span class="position-absolute top-0 start-100 translate-middle bag-counter shadow-sm">0</span>
+                        <div class="cart position-absolute top-100 end-50 shadow ">
+                            <div class="cart-info">
+                                <p>0 ITEMS</p>
+                                <a href="">VIEW CART</a>
+                            </div>
+                            <div class="cart-items">
+                                <p>No items found</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- secondary navbar -->
+            <div class="navbar-align" id="secondary-navbar">
+                <!--secondary navbar not used yet-->
+                <a href="" class="nav-deals"><span>LIMITED TIME</span><br>
+                    DAILY DEALS
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="" class="nav-item">HOME</a></li>
+                    <li class="shop-menu"><a href="" class="nav-item">SHOP ></a>
+                        <ul class="shop-menu-list position-absolute top-100 start-0  bg-body shadow ">
+
+                            <li><a class="shop-menu-item" href="">TRENDING</a> </li>
+                            <li><a class="shop-menu-item" href="">TOYS</a> </li>
+                            <li><a class="shop-menu-item" href="">CLOTHES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="nav-item">ABOUT US</a></li>
+                    <li><a href="" class="nav-item">BLOG</a></li>
+                    <li><a href="" class="nav-item">FAQ</a></li>
+                    <li><a href="" class="nav-item">CONTACT US</a></li>
+                </ul>
+
+                <!-- search box controller -->
+                <div class="nav-search position-relative">
+                    <div onclick="searchBoxFunc ()" class="d-flex">
+                        <img src="assets/icons/search.svg" alt="" width="15px">
+                        <p>SEARCH</p>
+                    </div>
+
+                    <!-- search box -->
+                    <div class="position-absolute top-0 end-0  search-box">
+                        <span class="triangle"></span>
+                        <form class="search-box-body">
+                            <input type="text" placeholder="search">
+                            <select class="search-menu">
+                                <option selected="true" disabled="disabled">Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <button type="submit"><i class="bi bi-search "></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Large Navbar end -->
+
+        <!-- Small Navbar start -->
+        <nav class="small-navbar" id="small-nav">
+            <div class="small-navbar-left">
+                <a class="small-navbar-toggler" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <i class="fas fa-bars h5"></i></a>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="offcanvas-navbar">
+                            <li class="offcanvas-nav-item"><a href="">HOME</a> </li>
+                            <li class="offcanvas-nav-item d-flex"><a href="">SHOP</a> <span
+                                    onclick="offcanvasNavItemMenu()" class="px-3">></span></li>
+                            <ul class="offcanvas-shop-menu offcanvas-navbar">
+                                <li class="offcanvas-shop-menu-item offcanvas-nav-item"><a href="">Trending</a></li>
+                                <li class="offcanvas-shop-menu-item offcanvas-nav-item"><a href="">Toys</a></li>
+                                <li class="offcanvas-shop-menu-item offcanvas-nav-item"><a href="">Clothes</a></li>
+
+                            </ul>
+                            <li class="offcanvas-nav-item"><a href="">ABOUT US</a></li>
+                            <li class="offcanvas-nav-item"><a href="">BLOG</a></li>
+                            <li class="offcanvas-nav-item"><a href="">FAQ</a></li>
+                            <li class="offcanvas-nav-item"><a href="">CONTACT US</a></li>
+                        </ul>
+
+                        <a class="offcanvas-deals" href="">DAILY DEALS <span>LIMTED TIME</span></a>
+                        <a class="offcanvas-login" href="">LOG IN</a>
+                        <div class="d-flex justify-content-center">
+                            <a href="" class="offcanvas-facebook"><img src="assets/icons/facebook-app-symbol.svg" alt=""
+                                    height="15px">
+                            </a>
+                            <a href="" class="offcanvas-insta"><img src="assets/icons/instagram.svg" alt=""
+                                    width="15px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href=""><img src="assets/icons/logo.png" alt="" class="logo"></a>
+            </div>
+            <div class="small-navbar-right position-relative">
+                <div class="position-relative cart-viewer">
+                    <img src="assets/icons/bag.svg" alt="" class="bag-icon">
+                    <span class="position-absolute top-0 start-100 translate-middle bag-counter shadow-sm">0</span>
+                    <div class="cart position-absolute position-absolute top-100 end-50 shadow  ">
+                        <span class="triangle"></span>
+                        <div class="cart-info">
+                            <p>0 ITEMS</p>
+                            <a href="">VIEW CART</a>
+                        </div>
+                        <div class="cart-items">
+                            <p>No items found</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- search box controller -->
+                <div class="nav-search position-relative">
+                    <div onclick="searchBoxFuncSmall ()" class="d-flex">
+                        <img src="assets/icons/search.svg" alt="" width="20px">
+                        <p>SEARCH</p>
+                    </div>
+                    <!-- search box -->
+                    <div class="position-absolute top-0 end-0  search-box-small">
+                        <span class="triangle"></span>
+                        <form class="search-box-body">
+                            <input type="text" placeholder="search">
+                            <select class="search-menu">
+                                <option selected="true" disabled="disabled">Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <button type="submit"><i class="bi bi-search "></i></button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Small Navbar end -->
+
+        <!-- breadcrumb navigation -->
+        <div class="bread-links">
+            <a href="#">Home</a>
+            <span>></span>
+            <p>About Us</p>
+        </div>
+
+    </header>
+    <!-- story section -->
+    <section class="story-section">
+        <img src="assets/sweet-stix-toys-about-us-banner-1.jpg" alt="" width="90%">
+        <h1 class="section-heading">Our Story</h1>
+        <div>
+            <p>We’re a small team of six who make it our mission to bring joy to you and your kids. We started in 2019
+                (pre covid) and have loved every minute. I (John) have always loved retail. My first job was when I was
+                in high school, working at the local Spar. This may sound nerdy,
+                but I loved seeing the shelves empty and then restocking them… weird, I know, but each to his own </p>
+            <p>Since then, ecommerce has boomed (when I was in high school there were no mobile phones and there was no
+                internet – do you remember that???). That’s great but when you buy from one of these huge sites you’re
+                just another order number.</p>
+            <p class="fw-bold">I also had two amazing kids and so the vision to create a store which brings smiles by
+                getting the best
+                toys and clothes at the best possible prices was born. </p>
+            <p>As a small, focused and dedicated team we strive to go the extra mile with every order we receive. We
+                work hard to ensure that when you place your order it’s treated with love and care. We realise that
+                sometimes things can and will go wrong. When that happens we’ll take responsibility to ensure that the
+                issue is resolved quickly and to your satisfaction.</p>
+            <p class="fw-bold">We’re constantly looking at ways of reducing costs and then passing those savings on to
+                you. We know that
+                times are tough (we all feel it).</p>
+            <p>We also want to help crafts people earn through their crafts. If you (or perhaps you know of someone) who
+                makes wooden toys, or knitted / crochet toys, please get in touch to see if we can work together selling
+                your products through our store.</p>
+        </div>
+    </section>
+    <!-- choose us section -->
+    <section class="choose-us">
+        <h1 class="section-heading">Why Choose Us</h1>
+        <div class="choose-container">
+            <div class="choose-item">
+                <div>
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Free Dliveries</h3>
+                    <p>For orders over R650</p>
+                </div>
+            </div>
+            <div class="choose-item">
+                <div>
+                    <i class="fas fa-retweet"></i>
+                    <h3>Returns</h3>
+                    <p>No hassle returns</p>
+                </div>
+            </div>
+            <div class="choose-item">
+                <div>
+                    <i class="fas fa-star"></i>
+                    <h3>Support</h3>
+                    <p>Always ready to help you</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- team section -->
+    <section class="team">
+        <h1 class="section-heading">Meet Our Team!</h1>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
+                <h3>John</h3>
+                <p>John is the developer and general manager and loves to take care of you, ensuring that your
+                    experience with us is pleasurable and easy. If there are any problems during the order process (or
+                    after) he'll go out of his way to ensure that you get the best service and quality as you deserve.
+
+                </p>
+            </div>
+            <div class="team-member">
+                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
+                <h3>Sophia</h3>
+                <p>Sophia receives and packs your orders (you'll know it was her when you receive your package because
+                    she uses far too much tape on the boxes wanting to ensure that your order is safe in transit).</p>
+            </div>
+            <div class="team-member">
+                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
+                <h3>Lisa</h3>
+                <p>Lisa is here to answer your questions on social media and loves to build lasting relationships with
+                    our friends and clients.</p>
+            </div>
+            <div class="team-member">
+                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
+                <h3>Loren</h3>
+                <p>Loren keeps an eye on the athesestics of the site and makes sure that John gets the fonts and images
+                    just right.</p>
+            </div>
+            <div class="team-member">
+                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
+                <h3>Anna</h3>
+                <p>Anna is our product satisfaction tester. She is highly profesional and only the best will pass her
+                    high standards.</p>
+            </div>
+            <div class="team-member">
+                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
+                <h3>Jade</h3>
+                <p>Jade is our product durability tester. Its her job to weed out the bad toys from the good with stress
+                    and endurance testing.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <img src="assets/icons/logo.png" alt="" width="300px">
+                <ul class="mt-5">
+                    <li class="border-bottom mt-2"><i class="bi bi-telephone-fill"></i> <span>Phone:</span> <span
+                            class="fw-normal text-muted"> 087 821 6550</span></li>
+                    <li class="border-bottom mt-2"><i class="bi bi-whatsapp"></i> <span>WhatsApp:</span> <span
+                            class="fw-normal text-muted"> 074 050 8890</span></li>
+                    <li class="border-bottom mt-2"><i class="bi bi-envelope"></i> <span>Email: <br></span> <span
+                            class="fw-normal text-muted"> shop@sweetstixtoys.co.za
+                        </span></li>
+                    <li class="mt-5 d-flex">
+                        <a href="" class="social-links-icons me-2">
+                            <img src="assets/icons/facebook-app-symbol.svg" alt="" width="auto" height="13px"> </a>
+                        <a href="" class="social-links-icons">
+                            <img src="assets/icons/instagram.svg" alt="" width="13px" height="auto"> </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p>Account </p>
+                <ul>
+                    <li class="mt-1"><a href="">My Account</a></li>
+                    <li class="mt-1"><a href="">Shipping Rates</a></li>
+                    <li class="mt-1"><a href="">Privacy Policy</a></li>
+                    <li class="mt-1"><a href="">Return Policy</a></li>
+                    <li class="mt-1"><a href="">FAQs</a></li>
+                    <li class="mt-1"><a href="">About us</a></li>
+                </ul>
+            </div>
+            <div>
+                <p>Newsletter</p>
+                <span class="text-muted fw-normal">Get all the latest information on Events, Sales and Offers. Sign up
+                    for newsletter today</span>
+                <form action="">
+                    <input type="text" placeholder="Email Address">
+                    <input type="submit" value="subscribe">
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-end">
+            <div class="copytights">
+                <p>Sweet Stix Toys © 2021. All Rights Reserved.</p>
+                <p>Powered by <a href="" class="text-decoration-none ">Eqolte Services</a> </p>
+            </div>
+            <div class="d-flex">
+                <img src="assets/trust-icons-small-1.png" alt="" width="200px">
+            </div>
+        </div>
+    </footer>
+    <div id="counter" style="display: none;">
+        <div class="d-flex">
+            <span id="days">11</span>
+            <span class=" fs-5 me-2">Days</span>
+        </div>
+        <div class="d-flex">
+            <span id="hours">12</span>
+            <span class=" fs-5 me-2">Hours</span>
+        </div>
+
+        <div class="d-flex">
+            <span id="minutes">4</span>
+            <span class=" fs-5 me-2">Minutes</span>
+        </div>
+        <div class="d-flex">
+            <span id="seconds">32</span>
+            <span class=" fs-5 me-2">Seconds</span>
+        </div>
+    </div>
+</body>
+<!-- bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+<script src="js/index-scripts.js"></script>
+
+</html>

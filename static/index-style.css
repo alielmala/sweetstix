@@ -1065,7 +1065,7 @@ footer{
    }
    .footer-container{
     flex-direction: column;
-    padding: 10vh 2vw;
+    padding: 10vh 15px;
     }
     .footer-container div {
         margin-right: auto;
