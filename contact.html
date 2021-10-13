@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Sweetstix</title>
-
+    <title>Contact Us - Sweetstix</title>
     <!-- CSS link -->
     <link rel="stylesheet" href="static/index-style.css">
-    <link rel="stylesheet" href="static/about.css">
+    <link rel="stylesheet" href="static/contact.css">
     <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- FontAwesome icons -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 </head>
 
 <body>
@@ -27,7 +27,7 @@
                 <img src="assets/icons/delivery-truck.svg" alt="Sweetstix delivery" class="top-navbar-img">
                 <p class="top-navbar-par">FREE SHIPPING for orders over R550</p>
                 <i onclick="closeTopNavbarFunc ()"
-                    class="fas fa-times text-muted position-absolute top-50 end-0 translate-middle-y me-4"></i>
+                    class="bi bi-x-lg text-muted position-absolute top-50 end-0 translate-middle-y me-4"></i>
             </div>
 
             <!-- main navbar -->
@@ -80,7 +80,7 @@
                             <li><a class="shop-menu-item" href="">CLOTHES</a></li>
                         </ul>
                     </li>
-                    <li><a href="" class="nav-item">ABOUT US</a></li>
+                    <li><a href="about.html" class="nav-item">ABOUT US</a></li>
                     <li><a href="" class="nav-item">BLOG</a></li>
                     <li><a href="" class="nav-item">FAQ</a></li>
                     <li><a href="" class="nav-item">CONTACT US</a></li>
@@ -134,7 +134,7 @@
                                 <li class="offcanvas-shop-menu-item offcanvas-nav-item"><a href="">Clothes</a></li>
 
                             </ul>
-                            <li class="offcanvas-nav-item"><a href="">ABOUT US</a></li>
+                            <li class="offcanvas-nav-item"><a href="about.html">ABOUT US</a></li>
                             <li class="offcanvas-nav-item"><a href="">BLOG</a></li>
                             <li class="offcanvas-nav-item"><a href="">FAQ</a></li>
                             <li class="offcanvas-nav-item"><a href="">CONTACT US</a></li>
@@ -152,7 +152,7 @@
                         </div>
                     </div>
                 </div>
-                <a href=""><img src="assets/icons/logo.png" alt="" class="logo"></a>
+                <a href=""><img src="assets/icons/logo.png" alt="" class="logo" ></a>
             </div>
             <div class="small-navbar-right position-relative">
                 <div class="position-relative cart-viewer">
@@ -199,112 +199,59 @@
         <div class="bread-links">
             <a href="#">HOME</a>
             <span>></span>
-            <p>ABOUT US</p>
+            <p>CONTACT US</p>
         </div>
 
+        <main class="location">
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?q=1%20beacon%20isle%20way%2C%20plettenberg%20bay&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near"
+                title="1 beacon isle way, plettenberg bay" aria-label="1 beacon isle way, plettenberg bay"></iframe>
+        </main>
     </header>
-    <!-- story section -->
-    <section class="story-section">
-        <img src="assets/sweet-stix-toys-about-us-banner-1.jpg" alt="" width="90%">
-        <h1 class="section-heading">Our Story</h1>
-        <div>
-            <p>We’re a small team of six who make it our mission to bring joy to you and your kids. We started in 2019
-                (pre covid) and have loved every minute. I (John) have always loved retail. My first job was when I was
-                in high school, working at the local Spar. This may sound nerdy,
-                but I loved seeing the shelves empty and then restocking them… weird, I know, but each to his own </p>
-            <p>Since then, ecommerce has boomed (when I was in high school there were no mobile phones and there was no
-                internet – do you remember that???). That’s great but when you buy from one of these huge sites you’re
-                just another order number.</p>
-            <p class="fw-bold">I also had two amazing kids and so the vision to create a store which brings smiles by
-                getting the best
-                toys and clothes at the best possible prices was born. </p>
-            <p>As a small, focused and dedicated team we strive to go the extra mile with every order we receive. We
-                work hard to ensure that when you place your order it’s treated with love and care. We realise that
-                sometimes things can and will go wrong. When that happens we’ll take responsibility to ensure that the
-                issue is resolved quickly and to your satisfaction.</p>
-            <p class="fw-bold">We’re constantly looking at ways of reducing costs and then passing those savings on to
-                you. We know that
-                times are tough (we all feel it).</p>
-            <p>We also want to help crafts people earn through their crafts. If you (or perhaps you know of someone) who
-                makes wooden toys, or knitted / crochet toys, please get in touch to see if we can work together selling
-                your products through our store.</p>
+    <section class="contact">
+        <div class="contact-us">
+            <h2><span>Contact</span> Us</h2>
+            <form action="" class="contact-form">
+                <div class="small-fields-container">
+                    <div>
+                        <label for="">Your name *</label><br>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div>
+                        <label for="">Your email address *</label><br>
+                        <input type="text" name="" id="">
+                    </div>
+                </div>
+                <div>
+                    <label for="">Subject</label><br>
+                    <input type="text" name="" id="">
+                </div>
+                <div>
+                    <label for="">Your Message</label><br>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <button>Send Message</button>
+            </form>
         </div>
-    </section>
-    <!-- choose us section -->
-    <section class="choose-us">
-        <h1 class="section-heading">Why Choose Us</h1>
-        <div class="choose-container">
-            <div class="choose-item">
-                <div>
-                    <i class="fas fa-shipping-fast"></i>
-                    <h3>Free Dliveries</h3>
-                    <p>For orders over R650</p>
-                </div>
-            </div>
-            <div class="choose-item">
-                <div>
-                    <i class="fas fa-retweet"></i>
-                    <h3>Returns</h3>
-                    <p>No hassle returns</p>
-                </div>
-            </div>
-            <div class="choose-item">
-                <div>
-                    <i class="fas fa-star"></i>
-                    <h3>Support</h3>
-                    <p>Always ready to help you</p>
-                </div>
+        <div class="contact-info">
+            <div class="contact-info-heading">
+                <h5>Need to get hold of us?</h5>
+                <p>We’re always here for you. Get in touch if you need anything.</p>
             </div>
 
-        </div>
-    </section>
+            <ul class="contact-info-list">
+                <li class="contact-info-items"><i class="fas fa-phone"></i> <span>Phone:</span><a href=""> 087 821 6550</a></li>
+                <li class="contact-info-items"><i class="fab fa-whatsapp"></i> <span>WhatsApp:</span><a href=""> 074 050 8890</a></li>
+                <li class="contact-info-items"><i class="far fa-envelope"></i> <span>Email:</span><a href=""> shop@sweetstixtoys.co.za</a></li>
+            </ul>
 
-    <!-- team section -->
-    <section class="team">
-        <h1 class="section-heading">Meet Our Team!</h1>
-        <div class="team-container">
-            <div class="team-member">
-                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
-                <h3>John</h3>
-                <p>John is the developer and general manager and loves to take care of you, ensuring that your
-                    experience with us is pleasurable and easy. If there are any problems during the order process (or
-                    after) he'll go out of his way to ensure that you get the best service and quality as you deserve.
-
-                </p>
-            </div>
-            <div class="team-member">
-                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
-                <h3>Sophia</h3>
-                <p>Sophia receives and packs your orders (you'll know it was her when you receive your package because
-                    she uses far too much tape on the boxes wanting to ensure that your order is safe in transit).</p>
-            </div>
-            <div class="team-member">
-                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
-                <h3>Lisa</h3>
-                <p>Lisa is here to answer your questions on social media and loves to build lasting relationships with
-                    our friends and clients.</p>
-            </div>
-            <div class="team-member">
-                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
-                <h3>Loren</h3>
-                <p>Loren keeps an eye on the athesestics of the site and makes sure that John gets the fonts and images
-                    just right.</p>
-            </div>
-            <div class="team-member">
-                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
-                <h3>Anna</h3>
-                <p>Anna is our product satisfaction tester. She is highly profesional and only the best will pass her
-                    high standards.</p>
-            </div>
-            <div class="team-member">
-                <img src="assets/profile-pic.jpg" alt="" height="113px" width="113px">
-                <h3>Jade</h3>
-                <p>Jade is our product durability tester. Its her job to weed out the bad toys from the good with stress
-                    and endurance testing.</p>
+            <div class="office-hours contact-info-heading">
+                <h5>Office Hours:</h5>
+                <p><i class="far fa-clock"></i>Week days from &nbsp; <b>08:30 AM - 16:30 PM</b></p>
+                <p><i class="far fa-clock"></i> Closed on public holidays</p>
             </div>
         </div>
     </section>
-
     <footer>
         <div class="footer-container">
             <div>
@@ -378,10 +325,12 @@
         </div>
     </div>
 </body>
+
 <!-- bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
+<!-- JS link -->
 <script src="js/index-scripts.js"></script>
 
 </html>
