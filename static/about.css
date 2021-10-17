@@ -5,29 +5,7 @@
 .fa-bars{
     color: black;
 }
-/* ------------- bread-links -------------------- */
-.bread-links{
-    display: flex;
-    padding:1.8vh 6.5vw;
-    margin: 0px auto;
-    border-bottom: 1.5px solid #F5F6F8;
-}
-.bread-links a , p{
-    font-size: 12px;
-    color: #777777;
-    font-weight: 400;
-}
-.bread-links a{
-    text-decoration: none;
-}
-.bread-links span{
-    margin: 0px 7px;
-    font-size: 17px;
-}
-.bread-links p{
-    margin-bottom: 0px;
-    
-}
+
 /* ------ story section --------- */
 .story-section{
     display: flex;
@@ -49,7 +27,7 @@
     padding: 3vw;
     padding: 25px;
 }
-p{
+.story-section p{
     font-size: 14px;
     letter-spacing: .2px;
     margin-bottom: 1.25rem;
